@@ -9,9 +9,7 @@
 
 <style>
 
-/* =======================
-   BASE
-======================= */
+/* ================= BASE ================= */
 * {
   margin: 0;
   padding: 0;
@@ -22,21 +20,19 @@ body {
   font-family: "Inter", sans-serif;
   background: #f6f4f1;
   color: #1a1a1a;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* =======================
-   BUTTON
-======================= */
+/* ================= BUTTON ================= */
 .btn {
   display: inline-block;
   padding: 14px 28px;
   background: #c5a969;
-  color: #fff;
+  color: white;
   border-radius: 40px;
   text-decoration: none;
-  transition: 0.3s;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -44,9 +40,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* =======================
-   HERO
-======================= */
+/* ================= HERO ================= */
 .hero {
   position: relative;
   height: 100vh;
@@ -57,7 +51,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.65);
+  filter: brightness(0.6);
 }
 
 .hero-content {
@@ -66,11 +60,11 @@ body {
   left: 8%;
   transform: translateY(-50%);
   color: white;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .hero h1 {
-  font-size: 56px;
+  font-size: 58px;
   line-height: 1.1;
 }
 
@@ -81,16 +75,31 @@ body {
   opacity: 0.9;
 }
 
-/* =======================
-   SPLIT IMAGES
-======================= */
+/* ================= SECTION TITLE ================= */
+.section {
+  padding: 90px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* ================= SPLIT ================= */
 .split {
   display: flex;
 }
 
 .split-item {
-  position: relative;
   width: 50%;
+  position: relative;
   overflow: hidden;
 }
 
@@ -107,20 +116,16 @@ body {
 
 .overlay {
   position: absolute;
-  bottom: 25px;
-  left: 25px;
+  bottom: 20px;
+  left: 20px;
   color: white;
   font-size: 22px;
-  font-weight: 500;
 }
 
-/* =======================
-   VIDEO SECTION
-======================= */
+/* ================= VIDEO ================= */
 .video-section {
   position: relative;
   height: 520px;
-  overflow: hidden;
 }
 
 .video-section video {
@@ -135,34 +140,31 @@ body {
   bottom: 40px;
   left: 40px;
   color: white;
+  max-width: 500px;
 }
 
 .video-text h2 {
   font-size: 34px;
 }
 
-/* =======================
-   FEATURES
-======================= */
+/* ================= FEATURES ================= */
 .features {
   display: flex;
   justify-content: space-around;
-  padding: 80px 20px;
   background: white;
+  padding: 90px 20px;
   text-align: center;
 }
 
 .feature {
-  max-width: 260px;
+  max-width: 280px;
 }
 
 .feature h3 {
   margin-bottom: 10px;
 }
 
-/* =======================
-   IMAGE BLOCK
-======================= */
+/* ================= IMAGE BLOCK ================= */
 .image-block {
   position: relative;
 }
@@ -179,13 +181,33 @@ body {
   left: 8%;
   transform: translateY(-50%);
   color: white;
-  font-size: 38px;
-  font-weight: 500;
+  font-size: 40px;
 }
 
-/* =======================
-   VIDEO GRID
-======================= */
+/* ================= STORY BLOCK ================= */
+.story {
+  background: white;
+  padding: 90px 20px;
+}
+
+.story-box {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.story-box h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.story-box p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ================= VIDEO GRID ================= */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -197,9 +219,7 @@ body {
   object-fit: cover;
 }
 
-/* =======================
-   CTA
-======================= */
+/* ================= CTA ================= */
 .cta {
   text-align: center;
   padding: 100px 20px;
@@ -207,13 +227,11 @@ body {
 }
 
 .cta h2 {
-  font-size: 36px;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
-/* =======================
-   RESPONSIVE
-======================= */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
   .hero h1 {
@@ -237,11 +255,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .hero-content {
-    left: 5%;
-  }
 }
-
 </style>
 </head>
 
@@ -255,21 +269,30 @@ body {
 
   <div class="hero-content">
     <h1>Designed for pets.<br>Trusted by owners.</h1>
-    <p>Premium comfort essentials for everyday living</p>
+    <p>Premium orthopedic comfort designed for healthier sleep, better recovery, and everyday calm.</p>
     <a class="btn" href="#">Shop Now</a>
   </div>
 </section>
 
-<!-- SPLIT -->
+<!-- STORY -->
+<section class="story">
+  <div class="story-box">
+    <h2>Comfort isn’t a luxury. It’s a necessity.</h2>
+    <p>Most pet beds lose shape within months, offering no real support for joints or posture.</p>
+    <p>Haven Pet Co. was created to solve that — with orthopedic structure, washable materials, and long-term durability.</p>
+  </div>
+</section>
+
+<!-- SPLIT IMAGES -->
 <section class="split">
   <div class="split-item">
     <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/e55a1032fc0cab71f67dd75ce3e7e318_dd90e6e8-9eb6-48df-905f-5ed92f6ab81a.jpg">
-    <div class="overlay">Comfort First</div>
+    <div class="overlay">Deep orthopedic support</div>
   </div>
 
   <div class="split-item">
     <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/890d80b88968e6648b4350500910b5a9.jpg">
-    <div class="overlay">Built to Last</div>
+    <div class="overlay">Built for daily durability</div>
   </div>
 </section>
 
@@ -280,52 +303,59 @@ body {
   </video>
 
   <div class="video-text">
-    <h2>Better sleep changes everything</h2>
+    <h2>Better sleep leads to better health</h2>
+    <p>Orthopedic design reduces pressure on joints and improves rest quality.</p>
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features">
   <div class="feature">
-    <h3>Orthopedic Support</h3>
-    <p>Protects joints and improves sleep quality</p>
+    <h3>Orthopedic Core</h3>
+    <p>Supports spine alignment and reduces joint pressure</p>
   </div>
 
   <div class="feature">
     <h3>Washable Cover</h3>
-    <p>Easy cleaning for daily use</p>
+    <p>Easy cleaning for everyday hygiene</p>
   </div>
 
   <div class="feature">
-    <h3>Non-Slip Base</h3>
-    <p>Stable on all surfaces</p>
+    <h3>Anti-Slip Base</h3>
+    <p>Stable even on smooth floors</p>
   </div>
 </section>
 
 <!-- IMAGE -->
 <section class="image-block">
   <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/f19ebcde04a2c18c1b1e9fd2fbd0aa0c.jpg">
-  <div class="image-text">Made for everyday life</div>
+  <div class="image-text">Made for real homes</div>
+</section>
+
+<!-- EXTRA IMAGE -->
+<section class="section">
+  <h2>Designed with real pet behavior in mind</h2>
+  <p>We studied how pets sleep, stretch, curl, and relax — then built a structure that adapts to every position naturally.</p>
+  <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/02e6c74cbb37bad4d22596761c6bef16.jpg" style="width:100%; margin-top:30px; border-radius:12px;">
+</section>
+
+<!-- SECOND IMAGE -->
+<section class="section">
+  <h2>Minimal design. Maximum comfort.</h2>
+  <p>Neutral tones and modern shapes ensure the bed fits seamlessly into any home interior.</p>
+  <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/8bae73d9ae228a4d928391967ae48209.jpg" style="width:100%; margin-top:30px; border-radius:12px;">
 </section>
 
 <!-- VIDEO GRID -->
 <section class="video-grid">
-  <video autoplay muted loop playsinline>
-    <source src="https://cdn.shopify.com/videos/c/o/v/1bf7507c4277498f8d44b9f4cc3d58a5.mp4">
-  </video>
-
-  <video autoplay muted loop playsinline>
-    <source src="https://cdn.shopify.com/videos/c/o/v/b646547ff6d54cadaf4bbfd15ced59d6.mp4">
-  </video>
-
-  <video autoplay muted loop playsinline>
-    <source src="https://cdn.shopify.com/videos/c/o/v/f999adc1640f47bebb2091c484fc10b0b.mp4">
-  </video>
+  <video autoplay muted loop playsinline><source src="https://cdn.shopify.com/videos/c/o/v/1bf7507c4277498f8d44b9f4cc3d58a5.mp4"></video>
+  <video autoplay muted loop playsinline><source src="https://cdn.shopify.com/videos/c/o/v/b646547ff6d54cadaf4bbfd15ced59d6.mp4"></video>
+  <video autoplay muted loop playsinline><source src="https://cdn.shopify.com/videos/c/o/v/f999adc1640f47bebb2091c484fc10b0b.mp4"></video>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Give your pet real comfort</h2>
+  <h2>Give your pet the comfort they deserve</h2>
   <a class="btn" href="#">Upgrade Now</a>
 </section>
 

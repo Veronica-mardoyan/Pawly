@@ -9,7 +9,7 @@
 
 <style>
 
-/* ================= BASE ================= */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@ body {
   display: inline-block;
   padding: 14px 28px;
   background: #c5a969;
-  color: white;
+  color: #fff;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 500;
@@ -64,7 +64,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 58px;
+  font-size: 56px;
   line-height: 1.1;
 }
 
@@ -72,60 +72,13 @@ body {
   margin-top: 15px;
   margin-bottom: 25px;
   font-size: 18px;
-  opacity: 0.9;
 }
 
-/* ================= SECTION TITLE ================= */
-.section {
-  padding: 90px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.section p {
-  font-size: 18px;
-  color: #444;
-}
-
-/* ================= SPLIT ================= */
-.split {
-  display: flex;
-}
-
-.split-item {
-  width: 50%;
-  position: relative;
-  overflow: hidden;
-}
-
-.split img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  transition: 0.5s;
-}
-
-.split-item:hover img {
-  transform: scale(1.05);
-}
-
-.overlay {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: 22px;
-}
-
-/* ================= VIDEO ================= */
+/* ================= STORY VIDEO ================= */
 .video-section {
   position: relative;
   height: 520px;
+  overflow: hidden;
 }
 
 .video-section video {
@@ -147,6 +100,30 @@ body {
   font-size: 34px;
 }
 
+/* ================= SPLIT IMAGES ================= */
+.split {
+  display: flex;
+}
+
+.split-item {
+  width: 50%;
+  position: relative;
+}
+
+.split img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 22px;
+}
+
 /* ================= FEATURES ================= */
 .features {
   display: flex;
@@ -164,59 +141,60 @@ body {
   margin-bottom: 10px;
 }
 
-/* ================= IMAGE BLOCK ================= */
-.image-block {
-  position: relative;
-}
-
+/* ================= IMAGE ================= */
 .image-block img {
   width: 100%;
   height: 520px;
   object-fit: cover;
 }
 
-.image-text {
+/* ================= BENEFIT VIDEO ================= */
+.benefit {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.benefit video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.benefit-text {
   position: absolute;
-  top: 50%;
-  left: 8%;
-  transform: translateY(-50%);
+  bottom: 40px;
+  left: 40px;
   color: white;
-  font-size: 40px;
+  max-width: 500px;
 }
 
-/* ================= STORY BLOCK ================= */
-.story {
-  background: white;
-  padding: 90px 20px;
+.benefit-text h2 {
+  font-size: 34px;
 }
 
-.story-box {
-  max-width: 900px;
-  margin: auto;
+/* ================= EXTRA ================= */
+.extra {
+  padding: 80px 20px;
   text-align: center;
 }
 
-.story-box h2 {
-  font-size: 38px;
-  margin-bottom: 20px;
+.extra h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
-.story-box p {
-  font-size: 18px;
+.extra p {
+  max-width: 800px;
+  margin: auto;
   color: #444;
-  margin-bottom: 15px;
 }
 
-/* ================= VIDEO GRID ================= */
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.video-grid video {
+.extra img {
   width: 100%;
-  height: 320px;
-  object-fit: cover;
+  margin-top: 25px;
+  border-radius: 10px;
 }
 
 /* ================= CTA ================= */
@@ -250,12 +228,8 @@ body {
     flex-direction: column;
     gap: 40px;
   }
-
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-
 }
+
 </style>
 </head>
 
@@ -264,93 +238,81 @@ body {
 <!-- HERO -->
 <section class="hero">
   <video autoplay muted loop playsinline>
-    <source src="https://cdn.shopify.com/videos/c/o/v/52bf7770221646e396158bc609d6aa31.mp4">
+    <source src="videos/hero.mp4">
   </video>
 
   <div class="hero-content">
     <h1>Designed for pets.<br>Trusted by owners.</h1>
-    <p>Premium orthopedic comfort designed for healthier sleep, better recovery, and everyday calm.</p>
-    <a class="btn" href="#">Shop Now</a>
+    <p>Orthopedic comfort designed for better sleep, better health, and daily calm.</p>
+    <a href="#" class="btn">Shop Now</a>
   </div>
 </section>
 
-<!-- STORY -->
-<section class="story">
-  <div class="story-box">
-    <h2>Comfort isn’t a luxury. It’s a necessity.</h2>
-    <p>Most pet beds lose shape within months, offering no real support for joints or posture.</p>
-    <p>Haven Pet Co. was created to solve that — with orthopedic structure, washable materials, and long-term durability.</p>
+<!-- STORY VIDEO -->
+<section class="video-section">
+  <video autoplay muted loop playsinline>
+    <source src="videos/story-1.mp4">
+  </video>
+
+  <div class="video-text">
+    <h2>Comfort is not optional</h2>
+    <p>We design based on real pet behavior, not assumptions.</p>
   </div>
 </section>
 
 <!-- SPLIT IMAGES -->
 <section class="split">
   <div class="split-item">
-    <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/e55a1032fc0cab71f67dd75ce3e7e318_dd90e6e8-9eb6-48df-905f-5ed92f6ab81a.jpg">
-    <div class="overlay">Deep orthopedic support</div>
+    <img src="images/split-1.jpg">
+    <div class="overlay">Orthopedic Support</div>
   </div>
 
   <div class="split-item">
-    <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/890d80b88968e6648b4350500910b5a9.jpg">
-    <div class="overlay">Built for daily durability</div>
-  </div>
-</section>
-
-<!-- VIDEO -->
-<section class="video-section">
-  <video autoplay muted loop playsinline>
-    <source src="https://cdn.shopify.com/videos/c/o/v/cc4790372880449c893a2b93780b0b72.mp4">
-  </video>
-
-  <div class="video-text">
-    <h2>Better sleep leads to better health</h2>
-    <p>Orthopedic design reduces pressure on joints and improves rest quality.</p>
+    <img src="images/split-2.jpg">
+    <div class="overlay">Built for Daily Use</div>
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features">
   <div class="feature">
-    <h3>Orthopedic Core</h3>
-    <p>Supports spine alignment and reduces joint pressure</p>
+    <h3>Joint Support</h3>
+    <p>Reduces pressure on spine and muscles</p>
   </div>
 
   <div class="feature">
     <h3>Washable Cover</h3>
-    <p>Easy cleaning for everyday hygiene</p>
+    <p>Easy cleaning for daily hygiene</p>
   </div>
 
   <div class="feature">
     <h3>Anti-Slip Base</h3>
-    <p>Stable even on smooth floors</p>
+    <p>Stable on all floor surfaces</p>
   </div>
 </section>
 
 <!-- IMAGE -->
 <section class="image-block">
-  <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/f19ebcde04a2c18c1b1e9fd2fbd0aa0c.jpg">
-  <div class="image-text">Made for real homes</div>
+  <img src="images/feature-1.jpg">
 </section>
 
-<!-- EXTRA IMAGE -->
-<section class="section">
-  <h2>Designed with real pet behavior in mind</h2>
-  <p>We studied how pets sleep, stretch, curl, and relax — then built a structure that adapts to every position naturally.</p>
-  <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/02e6c74cbb37bad4d22596761c6bef16.jpg" style="width:100%; margin-top:30px; border-radius:12px;">
+<!-- BENEFIT VIDEO -->
+<section class="benefit">
+  <video autoplay muted loop playsinline>
+    <source src="videos/benefit-1.mp4">
+  </video>
+
+  <div class="benefit-text">
+    <h2>Better sleep improves health</h2>
+    <p>Orthopedic structure supports recovery and relaxation.</p>
+  </div>
 </section>
 
-<!-- SECOND IMAGE -->
-<section class="section">
-  <h2>Minimal design. Maximum comfort.</h2>
-  <p>Neutral tones and modern shapes ensure the bed fits seamlessly into any home interior.</p>
-  <img src="https://cdn.shopify.com/s/files/1/0762/5483/8962/files/8bae73d9ae228a4d928391967ae48209.jpg" style="width:100%; margin-top:30px; border-radius:12px;">
-</section>
-
-<!-- VIDEO GRID -->
-<section class="video-grid">
-  <video autoplay muted loop playsinline><source src="https://cdn.shopify.com/videos/c/o/v/1bf7507c4277498f8d44b9f4cc3d58a5.mp4"></video>
-  <video autoplay muted loop playsinline><source src="https://cdn.shopify.com/videos/c/o/v/b646547ff6d54cadaf4bbfd15ced59d6.mp4"></video>
-  <video autoplay muted loop playsinline><source src="https://cdn.shopify.com/videos/c/o/v/f999adc1640f47bebb2091c484fc10b0b.mp4"></video>
+<!-- EXTRA -->
+<section class="extra">
+  <h2>Designed for real homes</h2>
+  <p>Minimal aesthetics ensure seamless integration into modern interiors while maintaining full comfort functionality.</p>
+  <img src="images/feature-2.jpg">
 </section>
 
 <!-- CTA -->
